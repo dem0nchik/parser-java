@@ -1,0 +1,174 @@
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class ParseText {
+    public static void main(String[] args) {
+        countUniqueWordsFromFile("file.txt");
+    }
+
+    /*public static void countUniqueWordsFromFile(String filePath) {
+        HashMap<String, Integer> map = new HashMap<>();
+
+        try {
+            Path path = Paths.get(filePath);
+            BufferedReader reader = Files.newBufferedReader(path);
+            String line;
+
+            while((line = reader.readLine()) != null) {
+                String[] words = line.split(" ");
+
+                for (String word : words) {
+                    if(map.containsKey(word)) {
+                        Integer k = map.get(word);
+                        k = k +1;
+                        map.put(word, k);
+                    } else {
+                        map.put(word, 1);
+                    }
+                }
+            }
+
+            for (String key : map.keySet()) {
+                System.out.println(key + " - " + map.get(key));
+            }
+        }  catch (IOException e) {
+            e.printStackTrace();
+        }
+    }*/
+
+    public static void countUniqueWordsFromFile(String filePath) {
+        HashMap<String, Integer> map = new HashMap<>();
+        try (Scanner scan = new Scanner(new File(filePath))){
+            scan.useDelimiter("\\s|\\n");
+            while (scan.hasNext()) {
+                String word = scan.next();
+                if (map.containsKey(word)) {
+                    Integer k = map.get(word);
+                    k += 1;
+                    map.put(word, k);
+                } else {
+                    map.put(word, 1);
+                }
+            }
+
+            map.keySet().forEach(key -> System.out.println(key + " - " + map.get(key)));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+It's your choice
+
+
+When we make the Guardian available to you online, we use cookies and similar technologies to help us to do this. Some are necessary to help our website work properly and can't be switched off, and some are optional but support the Guardian and your experience in other ways.
+
+
+For instance, we and our partners use information about you, your devices and your online interactions with us to provide, analyse and improve our services. This includes personalising content or advertising for you.
+
+
+We use cookies and similar technologies for the following purposes:
+
+
+Store and/or access information on a device
+
+Personalised ads and content, ad and content measurement, audience insights and product development
+
+You can find out more in our privacy policy and cookie policy, and manage the choices available to you at any time by going to ‘Privacy settings’ at the bottom of any page.
+
+
+Are you happy to accept cookies?
+
+
+To manage your cookie choices now, including how to opt out where our partners rely on legitimate interests to use your information, click on Manage my cookies.
+
+
+Yes, I’m happy
+Manage my cookies
+It's your choice
+
+
+When we make the Guardian available to you online, we use cookies and similar technologies to help us to do this. Some are necessary to help our website work properly and can't be switched off, and some are optional but support the Guardian and your experience in other ways.
+
+
+For instance, we and our partners use information about you, your devices and your online interactions with us to provide, analyse and improve our services. This includes personalising content or advertising for you.
+
+
+We use cookies and similar technologies for the following purposes:
+
+
+Store and/or access information on a device
+
+Personalised ads and content, ad and content measurement, audience insights and product development
+
+You can find out more in our privacy policy and cookie policy, and manage the choices available to you at any time by going to ‘Privacy settings’ at the bottom of any page.
+
+
+Are you happy to accept cookies?
+
+
+To manage your cookie choices now, including how to opt out where our partners rely on legitimate interests to use your information, click on Manage my cookies.
+
+
+Yes, I’m happy
+Manage my cookies
+It's your choice
+
+
+When we make the Guardian available to you online, we use cookies and similar technologies to help us to do this. Some are necessary to help our website work properly and can't be switched off, and some are optional but support the Guardian and your experience in other ways.
+
+
+For instance, we and our partners use information about you, your devices and your online interactions with us to provide, analyse and improve our services. This includes personalising content or advertising for you.
+
+
+We use cookies and similar technologies for the following purposes:
+
+
+Store and/or access information on a device
+
+Personalised ads and content, ad and content measurement, audience insights and product development
+
+You can find out more in our privacy policy and cookie policy, and manage the choices available to you at any time by going to ‘Privacy settings’ at the bottom of any page.
+
+
+Are you happy to accept cookies?
+
+
+To manage your cookie choices now, including how to opt out where our partners rely on legitimate interests to use your information, click on Manage my cookies.
+
+
+Yes, I’m happy
+Manage my cookies
+It's your choice
+
+
+When we make the Guardian available to you online, we use cookies and similar technologies to help us to do this. Some are necessary to help our website work properly and can't be switched off, and some are optional but support the Guardian and your experience in other ways.
+
+
+For instance, we and our partners use information about you, your devices and your online interactions with us to provide, analyse and improve our services. This includes personalising content or advertising for you.
+
+
+We use cookies and similar technologies for the following purposes:
+
+
+Store and/or access information on a device
+
+Personalised ads and content, ad and content measurement, audience insights and product development
+
+You can find out more in our privacy policy and cookie policy, and manage the choices available to you at any time by going to ‘Privacy settings’ at the bottom of any page.
+
+
+Are you happy to accept cookies?
+
+
+To manage your cookie choices now, including how to opt out where our partners rely on legitimate interests to use your information, click on Manage my cookies.
+
+
+Yes, I’m happy
+Manage my cookies
